@@ -16,6 +16,7 @@ import author from "../assets/author.jpeg";
 import img1 from "../assets/natural-herbs.jpg";
 import img2 from "../assets/img2.jpg";
 
+const MotionDiv = motion.div;
 
 const AboutPage = () => {
   const expertise = [

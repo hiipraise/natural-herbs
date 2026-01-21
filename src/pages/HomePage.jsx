@@ -25,6 +25,14 @@ import img11 from "../assets/images2.jpg";
 import img12 from "../assets/img5.jpeg";
 import img13 from "../assets/images5.jpg";
 import img14 from "../assets/images6.jpg";
+import img15 from "../assets/candida.jpeg";
+import img16 from "../assets/before.jpeg";
+import img17 from "../assets/process.jpeg";
+import img18 from "../assets/after.jpeg";
+import img19 from "../assets/arthritis.jpeg";
+import img20 from "../assets/arthritis2.jpeg";
+
+const MotionDiv = motion.div;
 
 const HomePage = ({ setCurrentPage }) => {
   const features = [
@@ -123,6 +131,7 @@ const HomePage = ({ setCurrentPage }) => {
 
   const successStories = [
     {
+      image: img12,
       title: "PCOS Recovery",
       testimonial:
         "I've a patient who was deeply troubled with hormonal imbalance, after weeks of using my natural treatment she is restored; her hormones are balanced, and her symptoms are virtually gone. She is happy her whole life is back.",
@@ -134,7 +143,7 @@ const HomePage = ({ setCurrentPage }) => {
         "After years of suffering, I found Dr. Chalopa's natural treatment. Within weeks, my symptoms disappeared completely. No side effects, just pure healing.",
     },
     {
-      image: img12,
+      image: img15,
       title: "Candida Recovery",
       testimonial:
         "The 7-day treatment worked wonders! My oral thrush is completely gone and hasn't returned. I'm amazed by the power of natural medicine.",
@@ -474,7 +483,288 @@ const HomePage = ({ setCurrentPage }) => {
         </div>
       </motion.section>
 
-      {/* Candidiasis Section */}
+      {/* Reactive Psoriatic & Rheumatoid Arthritis Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 md:p-12"
+      >
+        <div className="space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              Reactive Psoriatic Arthritis & Rheumatoid Arthritis
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Reactive arthritis is a condition that causes joint pain and
+              swelling, also called inflammation, after an infection in another
+              part of the body. The infection typically starts in the gut,
+              genitals or urinary tract.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <img
+              src={img19}
+              alt="Arthritis Treatment Before"
+              className="rounded-2xl shadow-xl w-full object-cover"
+            />
+            <img
+              src={img20}
+              alt="Arthritis Treatment After"
+              className="rounded-2xl shadow-xl w-full object-cover"
+            />
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 space-y-6">
+            <h3 className="text-2xl font-bold text-gray-800">
+              Understanding Reactive Arthritis
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              This condition typically affects the knees, ankles and feet. It
+              also can cause inflammation in the eyes, the skin and the tube
+              that carries urine out of the body, called the urethra. In the
+              past, reactive arthritis was sometimes called Reiter syndrome.
+            </p>
+
+            <div className="space-y-4">
+              <h4 className="text-xl font-bold text-cyan-900">Causes</h4>
+              <p className="text-gray-700 leading-relaxed">
+                Reactive arthritis itself is not contagious, but the bacteria
+                that cause it can spread through sex or food. Several types of
+                bacteria can trigger reactive arthritis. Common examples
+                include:
+              </p>
+
+              <div className="space-y-3">
+                <div className="border-l-4 border-cyan-600 pl-4">
+                  <h5 className="font-bold text-gray-800 mb-2">
+                    1. Chlamydia trachomatis
+                  </h5>
+                  <p className="text-gray-700">
+                    It is spread through sexual contact. The infection typically
+                    starts in the urethra, bladder or vagina.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-cyan-600 pl-4">
+                  <h5 className="font-bold text-gray-800 mb-2">
+                    2. Gastrointestinal Bacteria
+                  </h5>
+                  <p className="text-gray-700">
+                    Clostridium difficile (C. difficile), Escherichia coli (E.
+                    coli), campylobacter, salmonella, shigella and yersinia.
+                    These bacteria typically infect the gastrointestinal tract,
+                    causing diarrhea or other stomach and intestinal symptoms.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-cyan-50 p-4 rounded-lg mt-4">
+                <p className="text-gray-700 leading-relaxed">
+                  Only a small number of people who are exposed to these
+                  bacteria develop reactive arthritis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-cyan-900 text-white rounded-2xl p-8 space-y-4">
+            <h3 className="text-2xl font-bold">
+              Treatment: Natural Roots Mixture Called Verolantis
+            </h3>
+            <p className="text-cyan-100 leading-relaxed">
+              I'm so glad to announce that psoriatic arthritis can be cured
+              completely. Over some time now, my team and I have been working on
+              the absolute remediation of psoriatic arthritis, it is indeed mind
+              blowing and outstanding how natural herbs and plants have all the
+              answers we seek.
+            </p>
+            <p className="text-cyan-100 leading-relaxed">
+              This natural roots mixture is called{" "}
+              <span className="font-bold text-white">Verolantis</span> - a
+              powerful combination of natural herbs specifically formulated to
+              target and eliminate the root causes of reactive psoriatic
+              arthritis and rheumatoid arthritis.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setCurrentPage("order")}
+              className="bg-white text-cyan-900 px-8 py-4 rounded-full font-semibold"
+            >
+              Order Verolantis Arthritis Treatment
+            </motion.button>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Psoriasis Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 md:p-12"
+      >
+        <div className="space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              Psoriasis Treatment
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Psoriasis is an autoimmune skin condition that causes itchiness
+              and discomfort. Plaque psoriasis is the most common type. It
+              causes thick, scaly areas of skin. While there isn't a cure,
+              psoriasis treatment can help manage symptoms. Your provider may
+              prescribe special creams or ointments for psoriasis.
+            </p>
+          </div>
+
+          {/* Treatment Progress Images - Replace img9, img10, img11 with your before/process/after images */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="space-y-3">
+              <img
+                src={img16}
+                alt="Psoriasis Before Treatment"
+                className="rounded-2xl shadow-xl w-full object-cover"
+              />
+              <div className="text-center">
+                <h3 className="font-bold text-lg text-purple-900">
+                  Before Treatment
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Initial condition with visible plaques
+                </p>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <img
+                src={img17}
+                alt="Psoriasis During Treatment"
+                className="rounded-2xl shadow-xl w-full object-cover"
+              />
+              <div className="text-center">
+                <h3 className="font-bold text-lg text-purple-900">
+                  Treatment Process
+                </h3>
+                <p className="text-gray-600 text-sm">Healing in progress</p>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <img
+                src={img18}
+                alt="Psoriasis After Treatment"
+                className="rounded-2xl shadow-xl w-full object-cover"
+              />
+              <div className="text-center">
+                <h3 className="font-bold text-lg text-purple-900">
+                  After Treatment
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Clear, healthy skin restored
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 space-y-6">
+            <h3 className="text-2xl font-bold text-gray-800">
+              What are the types of psoriasis?
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              There are several types of psoriasis, including:
+            </p>
+            <div className="space-y-4">
+              <div className="border-l-4 border-purple-600 pl-4">
+                <h4 className="font-bold text-lg text-purple-900 mb-2">
+                  Plaque Psoriasis
+                </h4>
+                <p className="text-gray-700">
+                  Plaque psoriasis is the most common type of psoriasis. About
+                  80% to 90% of people with psoriasis have plaque psoriasis.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-600 pl-4">
+                <h4 className="font-bold text-lg text-purple-900 mb-2">
+                  Inverse Psoriasis
+                </h4>
+                <p className="text-gray-700">
+                  This type appears in your skin folds. It causes thin plaques
+                  without scales.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-600 pl-4">
+                <h4 className="font-bold text-lg text-purple-900 mb-2">
+                  Guttate Psoriasis
+                </h4>
+                <p className="text-gray-700">
+                  Guttate psoriasis may appear after a sore throat caused by a
+                  streptococcal infection. It looks like small, red, drop-shaped
+                  scaly spots and often affects children and young adults.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-600 pl-4">
+                <h4 className="font-bold text-lg text-purple-900 mb-2">
+                  Pustular Psoriasis
+                </h4>
+                <p className="text-gray-700">
+                  Pustular psoriasis has small, pus-filled bumps on top of
+                  plaques.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-600 pl-4">
+                <h4 className="font-bold text-lg text-purple-900 mb-2">
+                  Erythrodermic Psoriasis
+                </h4>
+                <p className="text-gray-700">
+                  This is a severe type of psoriasis that affects a large area
+                  (more than 90%) of your skin. It causes widespread skin
+                  discoloration and skin shedding.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-600 pl-4">
+                <h4 className="font-bold text-lg text-purple-900 mb-2">
+                  Sebopsoriasis
+                </h4>
+                <p className="text-gray-700">
+                  This type typically appears on your face and scalp as bumps
+                  and plaques with a greasy, yellow scale. This is a cross
+                  between psoriasis and seborrheic dermatitis.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-600 pl-4">
+                <h4 className="font-bold text-lg text-purple-900 mb-2">
+                  Nail Psoriasis
+                </h4>
+                <p className="text-gray-700">
+                  Nail psoriasis causes skin discoloration, pitting and changes
+                  to your fingernails and toenails.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-purple-900 text-white rounded-2xl p-8 space-y-4">
+            <h3 className="text-2xl font-bold">
+              Natural Treatment for Psoriasis
+            </h3>
+            <p className="text-purple-100 leading-relaxed">
+              Our natural herbal treatment addresses all types of psoriasis
+              using powerful botanical formulas that target the root cause of
+              the condition. With no side effects and proven results, our
+              treatment helps manage symptoms and restore healthy skin.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setCurrentPage("order")}
+              className="bg-white text-purple-900 px-8 py-4 rounded-full font-semibold"
+            >
+              Order Psoriasis Treatment
+            </motion.button>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Candidiasis Section - Expanded */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -517,53 +807,106 @@ const HomePage = ({ setCurrentPage }) => {
 
           <div className="bg-white rounded-2xl p-8 space-y-6">
             <h3 className="text-2xl font-bold text-gray-800">Symptoms</h3>
-            <div className="space-y-4">
-              <h4 className="font-bold text-lg text-green-900">
-                Children and Adults
-              </h4>
-              <p className="text-gray-700">
-                Symptoms of oral thrush may include:
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Creamy white patches or spots on your tongue, inner cheeks
-                    and sometimes on the roof of your mouth, gums and tonsils
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Slightly raised patches that look like cottage cheese
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Redness, burning or soreness that may cause difficulty
-                    eating or swallowing
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Slight bleeding if the patches are rubbed or scraped
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Cracking and redness at the corners of your mouth
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    A cottony feeling in your mouth and loss of taste
-                  </span>
-                </li>
-              </ul>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-bold text-lg text-green-900 mb-3">
+                  Children and Adults
+                </h4>
+                <p className="text-gray-700 mb-3">
+                  Symptoms of oral thrush may include:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Redness, burning or soreness that may be serious enough to
+                      cause a hard time eating or swallowing
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Slight bleeding if the patches or spots are rubbed or
+                      scraped
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Cracking and redness at the corners of your mouth
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      A cottony feeling in your mouth
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">Loss of taste</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Redness, irritation and pain under your dentures
+                    </span>
+                  </li>
+                </ul>
+                <div className="mt-4 p-4 bg-green-50 rounded-lg">
+                  <p className="text-gray-700 leading-relaxed">
+                    In severe cases, usually related to cancer or a weakened
+                    immune system from HIV/AIDS, the patches or spots may spread
+                    downward into your esophagus — the long, muscular tube
+                    stretching from the back of your mouth to your stomach. This
+                    is called Candida esophagitis. If this occurs, you may have
+                    trouble swallowing and feel pain or feel as if food is
+                    getting stuck in your throat.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-lg text-green-900 mb-3">
+                  Babies and Breastfeeding Mothers
+                </h4>
+                <p className="text-gray-700 mb-3">
+                  In addition to the distinctive white mouth spots, babies may
+                  have trouble feeding or be fussy and irritable. They can pass
+                  the infection to their mothers during breastfeeding. Then the
+                  infection may pass back and forth between the mother's nipples
+                  and the baby's mouth. Women whose breasts are infected with
+                  candida may have these symptoms:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Unusually red, sensitive, cracked or itchy nipples
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Shiny or flaky skin on the darker, circular area around
+                      the nipple, called the areola
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Unusual pain during nursing or painful nipples between
+                      feedings
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">
+                      Stabbing pains deep within the breast
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -613,7 +956,7 @@ const HomePage = ({ setCurrentPage }) => {
           className="text-center space-y-4"
         >
           <h2 className="text-4xl font-bold text-gray-800">
-            Treatment Journey: 3 Stages to Recovery
+            Herpes Treatment Journey: 3 Stages to Recovery
           </h2>
           <p className="text-xl text-gray-600">
             Our proven treatment protocol ensures complete healing
@@ -632,7 +975,7 @@ const HomePage = ({ setCurrentPage }) => {
               <img
                 src={stage.image}
                 alt={stage.stage}
-                className="w-full h-56 object-cover"
+                className="w-full object-cover"
               />
               <div className="p-6 space-y-4">
                 <h3 className="text-2xl font-bold text-amber-900">
@@ -775,7 +1118,7 @@ const HomePage = ({ setCurrentPage }) => {
                 <img
                   src={treatment.image}
                   alt={treatment.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full object-cover"
                 />
               )}
               <div className="p-6 space-y-3">
@@ -815,7 +1158,7 @@ const HomePage = ({ setCurrentPage }) => {
                 <img
                   src={story.image}
                   alt={story.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full object-cover"
                 />
               )}
               <div className="p-6 space-y-4">

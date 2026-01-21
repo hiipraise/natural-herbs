@@ -3,6 +3,8 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Menu, X, Leaf } from "lucide-react";
 
+const MotionDiv = motion.div;
+
 const Header = ({
   currentPage,
   setCurrentPage,

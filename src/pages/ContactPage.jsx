@@ -1,11 +1,47 @@
 // pages/ContactPage.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, XCircle } from 'lucide-react';
 import images from "../assets/images.jpg";
 
+const MotionDiv = motion.div;
 
 const ContactPage = () => {
+  const [formStatus, setFormStatus] = useState(null); // 'success', 'error', or null
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFormStatus(null);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/FORM_ID', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        form.reset();
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => setFormStatus(null), 5000);
+      } else {
+        setFormStatus('error');
+      }
+    } catch {
+      setFormStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -25,7 +61,6 @@ const ContactPage = () => {
         >
           <img 
             src={images} 
-            // src="https://placehold.co/600x400/8B4513/FFF?text=Contact+Us" 
             alt="Contact"
             className="rounded-2xl shadow-xl w-full"
           />
@@ -77,18 +112,49 @@ const ContactPage = () => {
           className="bg-white rounded-2xl shadow-lg p-8"
         >
           <h3 className="text-2xl font-bold text-gray-800 mb-6">Share Your Thoughts</h3>
-          <form 
-            action="https://formspree.io/f/YOUR_FORM_ID" 
-            method="POST"
-            className="space-y-6"
-          >
+          
+          {/* Success/Error Messages */}
+          <AnimatePresence>
+            {formStatus === 'success' && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="mb-6 bg-green-50 border-2 border-green-500 rounded-lg p-4 flex items-start gap-3"
+              >
+                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-green-800">Message Sent Successfully!</p>
+                  <p className="text-sm text-green-700">Thank you for contacting us. We'll get back to you soon.</p>
+                </div>
+              </motion.div>
+            )}
+
+            {formStatus === 'error' && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="mb-6 bg-red-50 border-2 border-red-500 rounded-lg p-4 flex items-start gap-3"
+              >
+                <XCircle className="w-6 h-6 text-red-500 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-red-800">Submission Failed</p>
+                  <p className="text-sm text-red-700">Please try again or contact us directly via WhatsApp.</p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-gray-700 font-semibold mb-2">Email</label>
               <input 
                 type="email" 
                 name="email"
                 required
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -99,18 +165,29 @@ const ContactPage = () => {
                 name="comment"
                 required
                 rows="6"
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none resize-none"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="Share your thoughts or questions..."
               />
             </div>
 
             <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+              whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               type="submit"
-              className="w-full bg-amber-700 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-amber-800 transition"
+              disabled={isSubmitting}
+              className="w-full bg-amber-700 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-amber-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
-              Send Message <Send size={20} />
+              {isSubmitting ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  Send Message <Send size={20} />
+                </>
+              )}
             </motion.button>
           </form>
         </motion.div>
