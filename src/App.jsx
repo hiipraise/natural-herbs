@@ -22,6 +22,18 @@ const App = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Inject Tawk.to Script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://embed.tawk.to/6971ec98dd396719806f847f/1jfig8de2";
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+
+    const s0 = document.getElementsByTagName("script")[0];
+    s0.parentNode.insertBefore(script, s0);
+  }, []);
+
   // Get current page from URL
   const getCurrentPage = () => {
     const path = location.pathname.slice(1);
@@ -88,24 +100,24 @@ const App = () => {
 
         <Footer setCurrentPage={setCurrentPage} />
 
-        {/* WhatsApp Button */}
+        {/* WhatsApp Button - Moved to bottom-left to avoid Tawk.to conflict */}
         <button
           onClick={openWhatsApp}
-          className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 group"
+          className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 group"
           aria-label="Contact us on WhatsApp"
         >
           <MessageCircle className="w-6 h-6" />
           <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
-          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <span className="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Chat with us
           </span>
         </button>
 
-        {/* Back to Top Button */}
+        {/* Back to Top Button - Moved to bottom-left above WhatsApp */}
         {showBackToTop && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-24 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 animate-bounce"
+            className="fixed bottom-24 left-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 animate-bounce"
             aria-label="Back to top"
           >
             <ArrowUp className="w-5 h-5" />
