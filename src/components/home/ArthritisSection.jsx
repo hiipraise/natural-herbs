@@ -1,10 +1,7 @@
-// ============================================
-// FILE: components/home/ArthritisSection.jsx
-// ============================================
+// components/home/ArthritisSection.jsx
 import React from "react";
 import { motion } from "framer-motion";
-const MotionDiv = motion.div
-
+const MotionDiv = motion.div;
 
 const ArthritisSection = ({ setCurrentPage, arthritisImages }) => (
   <motion.section
@@ -18,10 +15,10 @@ const ArthritisSection = ({ setCurrentPage, arthritisImages }) => (
           Reactive Psoriatic Arthritis & Rheumatoid Arthritis
         </h2>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Reactive arthritis is a condition that causes joint pain and
-          swelling, also called inflammation, after an infection in another
-          part of the body. The infection typically starts in the gut,
-          genitals or urinary tract.
+          Reactive arthritis is a condition that causes joint pain and swelling,
+          also called inflammation, after an infection in another part of the
+          body. The infection typically starts in the gut, genitals or urinary
+          tract.
         </p>
       </div>
 
@@ -43,19 +40,18 @@ const ArthritisSection = ({ setCurrentPage, arthritisImages }) => (
           Understanding Reactive Arthritis
         </h3>
         <p className="text-gray-700 leading-relaxed">
-          This condition typically affects the knees, ankles and feet. It
-          also can cause inflammation in the eyes, the skin and the tube
-          that carries urine out of the body, called the urethra. In the
-          past, reactive arthritis was sometimes called Reiter syndrome.
+          This condition typically affects the knees, ankles and feet. It also
+          can cause inflammation in the eyes, the skin and the tube that carries
+          urine out of the body, called the urethra. In the past, reactive
+          arthritis was sometimes called Reiter syndrome.
         </p>
 
         <div className="space-y-4">
           <h4 className="text-xl font-bold text-cyan-900">Causes</h4>
           <p className="text-gray-700 leading-relaxed">
-            Reactive arthritis itself is not contagious, but the bacteria
-            that cause it can spread through sex or food. Several types of
-            bacteria can trigger reactive arthritis. Common examples
-            include:
+            Reactive arthritis itself is not contagious, but the bacteria that
+            cause it can spread through sex or food. Several types of bacteria
+            can trigger reactive arthritis. Common examples include:
           </p>
 
           <div className="space-y-3">
@@ -75,17 +71,17 @@ const ArthritisSection = ({ setCurrentPage, arthritisImages }) => (
               </h5>
               <p className="text-gray-700">
                 Clostridium difficile (C. difficile), Escherichia coli (E.
-                coli), campylobacter, salmonella, shigella and yersinia.
-                These bacteria typically infect the gastrointestinal tract,
-                causing diarrhea or other stomach and intestinal symptoms.
+                coli), campylobacter, salmonella, shigella and yersinia. These
+                bacteria typically infect the gastrointestinal tract, causing
+                diarrhea or other stomach and intestinal symptoms.
               </p>
             </div>
           </div>
 
           <div className="bg-cyan-50 p-4 rounded-lg mt-4">
             <p className="text-gray-700 leading-relaxed">
-              Only a small number of people who are exposed to these
-              bacteria develop reactive arthritis.
+              Only a small number of people who are exposed to these bacteria
+              develop reactive arthritis.
             </p>
           </div>
         </div>
@@ -97,17 +93,17 @@ const ArthritisSection = ({ setCurrentPage, arthritisImages }) => (
         </h3>
         <p className="text-cyan-100 leading-relaxed">
           I'm so glad to announce that psoriatic arthritis can be cured
-          completely. Over some time now, my team and I have been working on
-          the absolute remediation of psoriatic arthritis, it is indeed mind
-          blowing and outstanding how natural herbs and plants have all the
-          answers we seek.
+          completely. Over some time now, my team and I have been working on the
+          absolute remediation of psoriatic arthritis, it is indeed mind blowing
+          and outstanding how natural herbs and plants have all the answers we
+          seek.
         </p>
         <p className="text-cyan-100 leading-relaxed">
           This natural roots mixture is called{" "}
-          <span className="font-bold text-white">Verolantis</span> - a
-          powerful combination of natural herbs specifically formulated to
-          target and eliminate the root causes of reactive psoriatic
-          arthritis and rheumatoid arthritis.
+          <span className="font-bold text-white">Verolantis</span> - a powerful
+          combination of natural herbs specifically formulated to target and
+          eliminate the root causes of reactive psoriatic arthritis and
+          rheumatoid arthritis.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

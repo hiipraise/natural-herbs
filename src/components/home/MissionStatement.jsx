@@ -1,10 +1,9 @@
-// ============================================
-// FILE: components/home/MissionStatement.jsx
-// ============================================
+// components/home/MissionStatement.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
 
-const MotionDiv = motion.div
+const MotionDiv = motion.div;
 
 const MissionStatement = () => (
   <motion.section

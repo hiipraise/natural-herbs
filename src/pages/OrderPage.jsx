@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, Send, CheckCircle, XCircle } from "lucide-react";
 import images from "../assets/order.jpg";
-import images1 from "../assets/ups.jpg";
-import images2 from "../assets/dhl.webp";
+import images1 from "../assets/applepay.png";
+import images2 from "../assets/paypal.avif";
 import images3 from "../assets/cashapp.webp";
 
 const MotionDiv = motion.div;
@@ -97,19 +97,19 @@ const OrderPage = () => {
                 src={images1}
                 // src="https://placehold.co/150x100/FFF/8B4513?text=UPS"
                 alt="UPS"
-                className="rounded-lg shadow"
+                className="rounded-lg shadow h-24"
               />
               <img
                 src={images2}
                 // src="https://placehold.co/150x100/FFF/8B4513?text=DHL"
                 alt="DHL"
-                className="rounded-lg shadow"
+                className="rounded-lg shadow h-24"
               />
               <img
                 src={images3}
                 // src="https://placehold.co/150x100/FFF/8B4513?text=VFE"
                 alt="CASHAPP"
-                className="rounded-lg shadow"
+                className="rounded-lg shadow h-24"
               />
             </div>
           </div>

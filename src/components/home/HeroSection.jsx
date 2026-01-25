@@ -1,11 +1,10 @@
-// ============================================
-// FILE: components/home/HeroSection.jsx
-// ============================================
+// components/home/HeroSection.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
-const MotionDiv = motion.div
+const MotionDiv = motion.div;
 
 const HeroSection = ({ setCurrentPage, heroImage }) => (
   <motion.section

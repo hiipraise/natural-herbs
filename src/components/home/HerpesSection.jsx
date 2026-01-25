@@ -1,10 +1,9 @@
-// ============================================
-// FILE: components/home/HerpesSection.jsx
-// ============================================
+// components/home/HerpesSection.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-const MotionDiv = motion.div
+const MotionDiv = motion.div;
 
 const HerpesSection = ({ setCurrentPage, herpesImage }) => (
   <motion.section
@@ -21,9 +20,9 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
           <p className="text-gray-700 leading-relaxed">
             Herpes simplex is a viral disease caused by the herpes simplex
             virus. Infections are categorised based on the part of the body
-            infected. Oral herpes involves the face or mouth. It may result
-            in small blisters in groups often called cold sores or fever
-            blisters or may just cause a sore throat.
+            infected. Oral herpes involves the face or mouth. It may result in
+            small blisters in groups often called cold sores or fever blisters
+            or may just cause a sore throat.
           </p>
           <p className="text-gray-700 leading-relaxed">
             Genital herpes, often simply known as herpes, may have minimal
@@ -32,11 +31,11 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
             shooting pains may occur before the blisters appear.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Herpes cycles between periods of active disease followed by
-            periods without symptoms. The first episode is often more severe
-            and may be associated with fever, muscle pains, swollen lymph
-            nodes and headaches. Over time, episodes of active disease
-            decrease in frequency and severity.
+            Herpes cycles between periods of active disease followed by periods
+            without symptoms. The first episode is often more severe and may be
+            associated with fever, muscle pains, swollen lymph nodes and
+            headaches. Over time, episodes of active disease decrease in
+            frequency and severity.
           </p>
         </div>
         <div className="space-y-4">
@@ -53,16 +52,15 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
           Understanding HSV Types
         </h3>
         <p className="text-gray-700 leading-relaxed">
-          There are two types of herpes simplex virus, type 1 (HSV-1) and
-          type 2 (HSV-2). HSV-1 more commonly causes oral infections while
-          HSV-2 more commonly causes genital infections. They are
-          transmitted by direct contact with body fluids or lesions of an
-          infected individual. Transmission may still occur when symptoms
-          are not present.
+          There are two types of herpes simplex virus, type 1 (HSV-1) and type 2
+          (HSV-2). HSV-1 more commonly causes oral infections while HSV-2 more
+          commonly causes genital infections. They are transmitted by direct
+          contact with body fluids or lesions of an infected individual.
+          Transmission may still occur when symptoms are not present.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          After infection, the viruses are transported along sensory nerves
-          to the nerve cell bodies, where they reside lifelong.
+          After infection, the viruses are transported along sensory nerves to
+          the nerve cell bodies, where they reside lifelong.
         </p>
       </div>
 
@@ -71,8 +69,8 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
           Natural Organic Cure
         </h3>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Herpes simplex 1 & 2 can be cured organically using the right
-          natural treatment currently at Dr. Chalopa Natural HealthCare.
+          Herpes simplex 1 & 2 can be cured organically using the right natural
+          treatment currently at Dr. Chalopa Natural HealthCare.
         </p>
         <h4 className="font-bold text-lg text-amber-900 mb-3">
           Treatment Benefits:
@@ -86,9 +84,7 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              No side effects or recurrence
-            </span>
+            <span className="text-gray-700">No side effects or recurrence</span>
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />

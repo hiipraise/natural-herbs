@@ -1,10 +1,7 @@
-// ============================================
-// FILE: components/home/FinalCTA.jsx
-// ============================================
+// components/home/FinalCTA.jsx
 import React from "react";
 import { motion } from "framer-motion";
-const MotionDiv = motion.div
-
+const MotionDiv = motion.div;
 
 const FinalCTA = ({ setCurrentPage }) => (
   <motion.section

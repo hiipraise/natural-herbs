@@ -20,6 +20,9 @@ const Header = ({
     { name: "Place Order", id: "order" },
   ];
 
+  // Only show search on home page
+  const showSearch = currentPage === "home";
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4">
@@ -39,16 +42,19 @@ const Header = ({
             </div>
           </motion.div>
 
-          <div className="hidden md:flex items-center gap-2 flex-1 max-w-md mx-8">
-            <Search className="w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search treatments..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none"
-            />
-          </div>
+          {/* Desktop Search - Only on Home page */}
+          {showSearch && (
+            <div className="hidden md:flex items-center gap-2 flex-1 max-w-md mx-8">
+              <Search className="w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search treatments..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none"
+              />
+            </div>
+          )}
 
           <nav className="hidden md:flex items-center gap-6">
             {navigation.map((item) => (
@@ -76,18 +82,21 @@ const Header = ({
           </button>
         </div>
 
-        <div className="md:hidden mt-4">
-          <div className="flex items-center gap-2">
-            <Search className="w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none"
-            />
+        {/* Mobile Search - Only on Home page */}
+        {showSearch && (
+          <div className="md:hidden mt-4">
+            <div className="flex items-center gap-2">
+              <Search className="w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none"
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <AnimatePresence>

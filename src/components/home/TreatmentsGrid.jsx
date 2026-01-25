@@ -1,9 +1,8 @@
-// ============================================
-// FILE: components/home/TreatmentsGrid.jsx
-// ============================================
+// components/home/TreatmentsGrid.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
-const MotionDiv = motion.div
+const MotionDiv = motion.div;
 
 const TreatmentsGrid = ({ treatments }) => (
   <section className="space-y-8">

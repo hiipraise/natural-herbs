@@ -1,10 +1,9 @@
-// ============================================
-// FILE: components/home/SuccessStories.jsx
-// ============================================
+// components/home/SuccessStories.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-const MotionDiv = motion.div
+const MotionDiv = motion.div;
 
 const SuccessStories = ({ successStories }) => (
   <section className="space-y-8">
@@ -14,9 +13,7 @@ const SuccessStories = ({ successStories }) => (
       className="text-center space-y-4"
     >
       <h2 className="text-4xl font-bold text-gray-800">Success Stories</h2>
-      <p className="text-xl text-gray-600">
-        Real results from real patients
-      </p>
+      <p className="text-xl text-gray-600">Real results from real patients</p>
     </motion.div>
 
     <div className="grid md:grid-cols-3 gap-8">
@@ -44,9 +41,7 @@ const SuccessStories = ({ successStories }) => (
                 />
               ))}
             </div>
-            <h3 className="text-xl font-bold text-gray-800">
-              {story.title}
-            </h3>
+            <h3 className="text-xl font-bold text-gray-800">{story.title}</h3>
             <p className="text-gray-600 italic">"{story.testimonial}"</p>
           </div>
         </motion.div>

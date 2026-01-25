@@ -66,6 +66,10 @@ const App = () => {
 
   // Navigation helper function for child components
   const setCurrentPage = (page) => {
+    // Clear search query when navigating away from home
+    if (page !== "home") {
+      setSearchQuery("");
+    }
     const route = page === "home" ? "/" : `/${page}`;
     navigate(route);
     setMenuOpen(false);
@@ -73,7 +77,6 @@ const App = () => {
 
   return (
     <>
-      {/* ScrollRestoration at the top level */}
       <ScrollRestoration />
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
@@ -90,7 +93,12 @@ const App = () => {
           <Routes>
             <Route
               path="/"
-              element={<HomePage setCurrentPage={setCurrentPage} />}
+              element={
+                <HomePage
+                  setCurrentPage={setCurrentPage}
+                  searchQuery={searchQuery}
+                />
+              }
             />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
@@ -100,7 +108,6 @@ const App = () => {
 
         <Footer setCurrentPage={setCurrentPage} />
 
-        {/* WhatsApp Button - Moved to bottom-left to avoid Tawk.to conflict */}
         <button
           onClick={openWhatsApp}
           className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 group"
@@ -113,7 +120,6 @@ const App = () => {
           </span>
         </button>
 
-        {/* Back to Top Button - Moved to bottom-left above WhatsApp */}
         {showBackToTop && (
           <button
             onClick={scrollToTop}

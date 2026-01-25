@@ -1,11 +1,10 @@
-// ============================================
-// FILE: components/home/ImageGallery.jsx
-// ============================================
+// components/home/ImageGallery.jsx
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { X, Play } from "lucide-react";
 
-const MotionDiv = motion.div
+const MotionDiv = motion.div;
 
 const ImageGallery = ({ images, videos = [] }) => {
   const [selectedMedia, setSelectedMedia] = useState(null);
@@ -34,7 +33,7 @@ const ImageGallery = ({ images, videos = [] }) => {
             transition={{ delay: idx * 0.05 }}
             whileHover={{ scale: 1.05 }}
             className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
-            onClick={() => setSelectedMedia({ type: 'image', src: img })}
+            onClick={() => setSelectedMedia({ type: "image", src: img })}
           >
             <img
               src={img}
@@ -52,7 +51,13 @@ const ImageGallery = ({ images, videos = [] }) => {
             transition={{ delay: (images.length + idx) * 0.05 }}
             whileHover={{ scale: 1.05 }}
             className="rounded-2xl overflow-hidden shadow-lg cursor-pointer relative"
-            onClick={() => setSelectedMedia({ type: 'video', src: video.src, thumbnail: video.thumbnail })}
+            onClick={() =>
+              setSelectedMedia({
+                type: "video",
+                src: video.src,
+                thumbnail: video.thumbnail,
+              })
+            }
           >
             <img
               src={video.thumbnail}
@@ -80,9 +85,12 @@ const ImageGallery = ({ images, videos = [] }) => {
           >
             <X className="w-6 h-6" />
           </button>
-          
-          <div className="max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
-            {selectedMedia.type === 'image' ? (
+
+          <div
+            className="max-w-6xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {selectedMedia.type === "image" ? (
               <img
                 src={selectedMedia.src}
                 alt="Full size view"

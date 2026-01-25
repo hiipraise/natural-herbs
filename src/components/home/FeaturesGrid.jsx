@@ -1,9 +1,7 @@
-// ============================================
-// FILE: components/home/FeaturesGrid.jsx
-// ============================================
+// components/home/FeaturesGrid.jsx
 import React from "react";
 import { motion } from "framer-motion";
-const MotionDiv = motion.div
+const MotionDiv = motion.div;
 
 const FeaturesGrid = ({ features }) => (
   <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
