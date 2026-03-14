@@ -249,7 +249,7 @@ const Type2DiabetesSection = ({ setCurrentPage }) => (
             keep up with the lifestyle changes, medication and blood sugar
             monitoring. However, everything changed when I learned that T2D can
             be reversed without any ill effect on the body. My name is Elizabeth
-            Moore and my findings led me to Dr. chalopa a natural healthcare
+            Moore and my findings led me to Dr. Amara a natural healthcare
             practitioner."
           </p>
           <p className="font-semibold text-red-900">— Elizabeth Moore</p>

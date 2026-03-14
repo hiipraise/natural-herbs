@@ -33,10 +33,10 @@ const Header = ({
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => setCurrentPage("home")}
           >
-            <Leaf className="w-10 h-10 text-amber-700" />
+            <Leaf className="w-10 h-10 text-emerald-700" />
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-gray-800">
-                Dr. Chalopa
+                Dr. Amara
               </h1>
               <p className="text-xs text-gray-600">Natural Healthcare</p>
             </div>
@@ -51,7 +51,7 @@ const Header = ({
                 placeholder="Search treatments..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none"
+                className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none"
               />
             </div>
           )}
@@ -65,8 +65,8 @@ const Header = ({
                 onClick={() => setCurrentPage(item.id)}
                 className={`font-semibold transition ${
                   currentPage === item.id
-                    ? "text-amber-700"
-                    : "text-gray-600 hover:text-amber-700"
+                    ? "text-emerald-700"
+                    : "text-gray-600 hover:text-emerald-700"
                 }`}
               >
                 {item.name}
@@ -92,7 +92,7 @@ const Header = ({
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none"
+                className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none"
               />
             </div>
           </div>
@@ -118,8 +118,8 @@ const Header = ({
                   }}
                   className={`text-left px-4 py-3 rounded-lg font-semibold transition ${
                     currentPage === item.id
-                      ? "bg-amber-700 text-white"
-                      : "text-gray-600 hover:bg-amber-50"
+                      ? "bg-emerald-700 text-white"
+                      : "text-gray-600 hover:bg-emerald-50"
                   }`}
                 >
                   {item.name}

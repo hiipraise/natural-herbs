@@ -9,7 +9,7 @@ const MainTestimonial = ({ testimonialImage }) => (
   <motion.section
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 md:p-16"
+    className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-3xl p-8 md:p-16"
   >
     <div className="grid md:grid-cols-2 gap-8 items-center">
       <img
@@ -20,7 +20,7 @@ const MainTestimonial = ({ testimonialImage }) => (
       <div className="space-y-6">
         <div className="flex gap-1">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-6 h-6 fill-amber-500 text-amber-500" />
+            <Star key={i} className="w-6 h-6 fill-emerald-500 text-emerald-500" />
           ))}
         </div>
         <h3 className="text-3xl font-bold text-gray-800">
@@ -32,7 +32,7 @@ const MainTestimonial = ({ testimonialImage }) => (
           balanced, and her symptoms are virtually gone. She is happy her whole
           life is back."
         </p>
-        <p className="font-semibold text-amber-900">— Dr. Chalopa</p>
+        <p className="font-semibold text-emerald-900">— Dr. Amara</p>
       </div>
     </div>
   </motion.section>

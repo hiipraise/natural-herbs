@@ -16,20 +16,21 @@ const SuccessStories = ({ successStories }) => (
       <p className="text-xl text-gray-600">Real results from real patients</p>
     </motion.div>
 
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="flex gap-5 overflow-x-auto pb-2 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-visible">
       {successStories.map((story, idx) => (
         <motion.div
           key={idx}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: idx * 0.2 }}
-          className="bg-white rounded-2xl shadow-xl overflow-hidden"
+          className="min-w-[85%] snap-start bg-white rounded-2xl shadow-xl overflow-hidden sm:min-w-[70%] md:min-w-0"
         >
           {story.image && (
             <img
               src={story.image}
               alt={story.title}
-              className="w-full object-cover"
+              loading="lazy"
+              className="hidden sm:block w-full object-cover"
             />
           )}
           <div className="p-6 space-y-4">
@@ -37,7 +38,7 @@ const SuccessStories = ({ successStories }) => (
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-5 h-5 fill-amber-500 text-amber-500"
+                  className="w-5 h-5 fill-emerald-500 text-emerald-500"
                 />
               ))}
             </div>

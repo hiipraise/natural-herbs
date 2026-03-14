@@ -14,7 +14,7 @@ const FeaturesGrid = ({ features }) => (
         whileHover={{ y: -10 }}
         className="bg-white p-6 rounded-2xl shadow-lg text-center"
       >
-        <feature.icon className="w-12 h-12 mx-auto mb-4 text-amber-700" />
+        <feature.icon className="w-12 h-12 mx-auto mb-4 text-emerald-700" />
         <h3 className="font-bold text-gray-800 mb-2">{feature.title}</h3>
         <p className="text-gray-600 text-sm">{feature.text}</p>
       </motion.div>

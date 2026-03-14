@@ -27,7 +27,7 @@ const HerbalistSection = () => (
         forms of diagnosis such as Tongue, Pulse or Iris diagnosis to elicit the
         root of the health problems.
       </p>
-      <div className="bg-amber-50 p-6 rounded-xl">
+      <div className="bg-emerald-50 p-6 rounded-xl">
         <p className="text-lg text-gray-800 font-semibold">
           Our approach is aimed at restoring true health—not at suppressing the
           symptoms.

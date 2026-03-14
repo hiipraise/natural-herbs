@@ -79,7 +79,7 @@ const App = () => {
     <>
       <ScrollRestoration />
 
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
+      <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-emerald-50">
         <Header
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
@@ -123,7 +123,7 @@ const App = () => {
         {showBackToTop && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-24 left-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 animate-bounce"
+            className="fixed bottom-24 left-6 bg-teal-500 hover:bg-teal-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 animate-bounce"
             aria-label="Back to top"
           >
             <ArrowUp className="w-5 h-5" />

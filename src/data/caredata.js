@@ -115,7 +115,7 @@ export const successStories = [
     image: img13,
     title: "Herpes Cure",
     testimonial:
-      "After years of suffering, I found Dr. Chalopa's natural treatment. Within weeks, my symptoms disappeared completely. No side effects, just pure healing.",
+      "After years of suffering, I found Dr. Amara's natural treatment. Within weeks, my symptoms disappeared completely. No side effects, just pure healing.",
   },
   {
     image: img15,

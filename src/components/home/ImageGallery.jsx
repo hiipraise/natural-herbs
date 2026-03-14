@@ -24,7 +24,7 @@ const ImageGallery = ({ images, videos = [] }) => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory md:grid md:grid-cols-3 lg:grid-cols-5 md:overflow-visible">
         {images.map((img, idx) => (
           <motion.div
             key={`img-${idx}`}
@@ -32,12 +32,13 @@ const ImageGallery = ({ images, videos = [] }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: idx * 0.05 }}
             whileHover={{ scale: 1.05 }}
-            className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+            className="min-w-[45%] snap-start rounded-2xl overflow-hidden shadow-lg cursor-pointer sm:min-w-[32%] md:min-w-0"
             onClick={() => setSelectedMedia({ type: "image", src: img })}
           >
             <img
               src={img}
               alt={`Treatment result ${idx + 1}`}
+              loading="lazy"
               className="w-full object-cover aspect-square"
             />
           </motion.div>
@@ -50,7 +51,7 @@ const ImageGallery = ({ images, videos = [] }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: (images.length + idx) * 0.05 }}
             whileHover={{ scale: 1.05 }}
-            className="rounded-2xl overflow-hidden shadow-lg cursor-pointer relative"
+            className="min-w-[45%] snap-start rounded-2xl overflow-hidden shadow-lg cursor-pointer relative sm:min-w-[32%] md:min-w-0"
             onClick={() =>
               setSelectedMedia({
                 type: "video",
@@ -62,11 +63,12 @@ const ImageGallery = ({ images, videos = [] }) => {
             <img
               src={video.thumbnail}
               alt={`Treatment video ${idx + 1}`}
+              loading="lazy"
               className="w-full object-cover aspect-square"
             />
             <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
               <div className="bg-white rounded-full p-4">
-                <Play className="w-8 h-8 text-amber-900" fill="currentColor" />
+                <Play className="w-8 h-8 text-emerald-900" fill="currentColor" />
               </div>
             </div>
           </motion.div>

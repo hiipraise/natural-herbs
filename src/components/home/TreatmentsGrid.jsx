@@ -19,7 +19,7 @@ const TreatmentsGrid = ({ treatments }) => (
       </p>
     </motion.div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="flex gap-5 overflow-x-auto pb-2 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible">
       {treatments.map((treatment, idx) => (
         <motion.div
           key={idx}
@@ -27,13 +27,14 @@ const TreatmentsGrid = ({ treatments }) => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: idx * 0.1 }}
           whileHover={{ scale: 1.05 }}
-          className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer"
+          className="min-w-[85%] snap-start bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer sm:min-w-[70%] md:min-w-0"
         >
           {treatment.image && (
             <img
               src={treatment.image}
               alt={treatment.title}
-              className="w-full object-cover"
+              loading="lazy"
+              className="hidden sm:block w-full object-cover"
             />
           )}
           <div className="p-6 space-y-3">

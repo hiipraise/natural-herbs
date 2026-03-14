@@ -24,14 +24,14 @@ const TreatmentDeliveredSection = ({ videos }) => {
         className="text-center space-y-4"
       >
         <div className="flex items-center justify-center gap-3">
-          <Package className="w-10 h-10 text-amber-900" />
+          <Package className="w-10 h-10 text-emerald-900" />
           <h2 className="text-4xl font-bold text-gray-800">
             Treatment Delivered
           </h2>
         </div>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Watch real patients receiving their natural herbal treatments from Dr.
-          Chalopa Natural HealthCare
+          Amara Natural HealthCare
         </p>
       </motion.div>
 
@@ -40,7 +40,7 @@ const TreatmentDeliveredSection = ({ videos }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6"
+        className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6"
       >
         <div className="grid md:grid-cols-4 gap-4">
           {deliveryHighlights.map((highlight, idx) => (
@@ -74,7 +74,7 @@ const TreatmentDeliveredSection = ({ videos }) => {
               {/* Play overlay */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all flex items-center justify-center">
                 <div className="bg-white/90 group-hover:bg-white rounded-full p-4 transform group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-amber-900 fill-amber-900" />
+                  <Play className="w-8 h-8 text-emerald-900 fill-emerald-900" />
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ const TreatmentDeliveredSection = ({ videos }) => {
             {/* Close button */}
             <button
               onClick={() => setSelectedVideo(null)}
-              className="absolute -top-12 right-0 text-white hover:text-amber-500 transition-colors"
+              className="absolute -top-12 right-0 text-white hover:text-emerald-500 transition-colors"
             >
               <X className="w-8 h-8" />
             </button>

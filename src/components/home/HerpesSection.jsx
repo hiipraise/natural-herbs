@@ -9,7 +9,7 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
   <motion.section
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12"
+    className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 md:p-12"
   >
     <div className="space-y-8">
       <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -65,14 +65,14 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
       </div>
 
       <div className="bg-white p-6 rounded-xl">
-        <h3 className="font-bold text-2xl text-amber-900 mb-4">
+        <h3 className="font-bold text-2xl text-emerald-900 mb-4">
           Natural Organic Cure
         </h3>
         <p className="text-gray-700 leading-relaxed mb-4">
           Herpes simplex 1 & 2 can be cured organically using the right natural
-          treatment currently at Dr. Chalopa Natural HealthCare.
+          treatment currently at Dr. Amara Natural HealthCare.
         </p>
-        <h4 className="font-bold text-lg text-amber-900 mb-3">
+        <h4 className="font-bold text-lg text-emerald-900 mb-3">
           Treatment Benefits:
         </h4>
         <ul className="space-y-2">
@@ -101,7 +101,7 @@ const HerpesSection = ({ setCurrentPage, herpesImage }) => (
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setCurrentPage("order")}
-          className="w-full mt-6 bg-amber-900 text-white px-8 py-4 rounded-full font-semibold"
+          className="w-full mt-6 bg-emerald-900 text-white px-8 py-4 rounded-full font-semibold"
         >
           Order Herpes Treatment
         </motion.button>
