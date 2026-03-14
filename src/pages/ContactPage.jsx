@@ -69,27 +69,27 @@ const ContactPage = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
             
             <div className="flex items-start gap-4">
-              <Phone className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+              <Phone className="w-6 h-6 text-emerald-700 flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-gray-800">WhatsApp</p>
-                <a href="https://wa.me/14482008706" className="text-amber-700 hover:underline">
+                <a href="https://wa.me/14482008706" className="text-emerald-700 hover:underline">
                   +1 (448) 200-8706
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <Mail className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+              <Mail className="w-6 h-6 text-emerald-700 flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-gray-800">Email</p>
-                <a href="mailto:drchalopa@gmail.com" className="text-amber-700 hover:underline">
-                  drchalopa@gmail.com
+                <a href="mailto:dramara@gmail.com" className="text-emerald-700 hover:underline">
+                  dramara@gmail.com
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <MapPin className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+              <MapPin className="w-6 h-6 text-emerald-700 flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-gray-800">Location</p>
                 <p className="text-gray-600">Pkwy B, Coconut Creek, 33036 Florida</p>
@@ -97,7 +97,7 @@ const ContactPage = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <Clock className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+              <Clock className="w-6 h-6 text-emerald-700 flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-gray-800">Processing Time</p>
                 <p className="text-gray-600">Orders processed within 24 hours</p>
@@ -154,7 +154,7 @@ const ContactPage = () => {
                 name="email"
                 required
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -166,7 +166,7 @@ const ContactPage = () => {
                 required
                 rows="6"
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="Share your thoughts or questions..."
               />
             </div>
@@ -176,7 +176,7 @@ const ContactPage = () => {
               whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-amber-700 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-amber-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+              className="w-full bg-emerald-700 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-emerald-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>

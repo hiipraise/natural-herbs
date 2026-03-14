@@ -16,9 +16,9 @@ const Footer = ({ setCurrentPage }) => {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Leaf className="w-8 h-8 text-amber-500" />
+              <Leaf className="w-8 h-8 text-emerald-500" />
               <div>
-                <h3 className="font-bold text-lg">Dr. Chalopa</h3>
+                <h3 className="font-bold text-lg">Dr. Amara</h3>
                 <p className="text-sm text-gray-400">Natural Healthcare</p>
               </div>
             </div>
@@ -34,7 +34,7 @@ const Footer = ({ setCurrentPage }) => {
                 <button
                   key={item.id}
                   onClick={() => setCurrentPage(item.id)}
-                  className="block text-gray-400 hover:text-amber-500 transition text-sm"
+                  className="block text-gray-400 hover:text-emerald-500 transition text-sm"
                 >
                   {item.name}
                 </button>
@@ -63,7 +63,7 @@ const Footer = ({ setCurrentPage }) => {
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} />
-                <span>drchalopa@gmail.com</span>
+                <span>dramara@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <MapPin size={16} />
@@ -74,7 +74,7 @@ const Footer = ({ setCurrentPage }) => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2026 Dr. Chalopa Natural Healthcare. All rights reserved.</p>
+          <p>&copy; 2026 Dr. Amara Natural Healthcare. All rights reserved.</p>
         </div>
       </div>
     </footer>

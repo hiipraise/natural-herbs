@@ -72,9 +72,9 @@ const OrderPage = () => {
             className="rounded-2xl shadow-xl w-full"
           />
 
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 space-y-4">
+          <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-6 space-y-4">
             <h3 className="text-xl font-bold text-gray-800 flex items-center gap-2">
-              <Clock className="w-6 h-6 text-amber-700" />
+              <Clock className="w-6 h-6 text-emerald-700" />
               Delivery Information
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -185,7 +185,7 @@ const OrderPage = () => {
                       disabled={isSubmitting}
                       checked={orderType === option}
                       onChange={(e) => setOrderType(e.target.value)}
-                      className="w-5 h-5 text-amber-700 disabled:cursor-not-allowed"
+                      className="w-5 h-5 text-emerald-700 disabled:cursor-not-allowed"
                     />
                     <span className="text-gray-700">{option}</span>
                   </label>
@@ -202,7 +202,7 @@ const OrderPage = () => {
                 name="name"
                 required
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="Your full name"
               />
             </div>
@@ -216,7 +216,7 @@ const OrderPage = () => {
                 name="email"
                 required
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -230,7 +230,7 @@ const OrderPage = () => {
                 name="phone"
                 required
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="+1 (123) 456-7890"
               />
             </div>
@@ -244,7 +244,7 @@ const OrderPage = () => {
                 required
                 rows="5"
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-700 focus:outline-none resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-emerald-700 focus:outline-none resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="Please specify the treatment you're interested in and any questions..."
               />
             </div>
@@ -254,7 +254,7 @@ const OrderPage = () => {
               whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-amber-700 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-amber-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+              className="w-full bg-emerald-700 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-emerald-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>

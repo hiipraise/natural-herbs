@@ -35,7 +35,7 @@ const TreatmentStages = ({ treatmentStages }) => (
             className="w-full object-cover"
           />
           <div className="p-6 space-y-4">
-            <h3 className="text-2xl font-bold text-amber-900">{stage.stage}</h3>
+            <h3 className="text-2xl font-bold text-emerald-900">{stage.stage}</h3>
             <p className="text-gray-700">{stage.description}</p>
             <div className="space-y-2">
               <h4 className="font-semibold text-gray-800">Outcomes:</h4>

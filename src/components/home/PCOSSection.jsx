@@ -37,7 +37,7 @@ const PCOSSection = ({ pcosImage }) => (
         </div>
       </div>
 
-      <div className="bg-amber-50 rounded-2xl p-8 space-y-6">
+      <div className="bg-emerald-50 rounded-2xl p-8 space-y-6">
         <h3 className="text-2xl font-bold text-gray-800">
           Does PCOS Cause Infertility?
         </h3>
@@ -72,7 +72,7 @@ const PCOSSection = ({ pcosImage }) => (
         </p>
         <ul className="space-y-3">
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
             <div>
               <span className="font-semibold text-gray-800">
                 Irregular or absent periods:
@@ -86,7 +86,7 @@ const PCOSSection = ({ pcosImage }) => (
             </div>
           </li>
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
             <div>
               <span className="font-semibold text-gray-800">
                 Excess androgens:
@@ -100,7 +100,7 @@ const PCOSSection = ({ pcosImage }) => (
             </div>
           </li>
           <li className="flex items-start gap-2">
-            <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
             <div>
               <span className="font-semibold text-gray-800">
                 Insulin resistance:
@@ -120,8 +120,8 @@ const PCOSSection = ({ pcosImage }) => (
         </p>
       </div>
 
-      <div className="bg-amber-50 p-6 rounded-xl">
-        <h3 className="font-bold text-2xl text-amber-900 mb-4">
+      <div className="bg-emerald-50 p-6 rounded-xl">
+        <h3 className="font-bold text-2xl text-emerald-900 mb-4">
           Natural Remedy for PCOS
         </h3>
         <p className="text-gray-700 leading-relaxed">

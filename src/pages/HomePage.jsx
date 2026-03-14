@@ -48,23 +48,7 @@ import galimg2 from "../assets/imgs/galleryimg2.jpeg";
 import galimg3 from "../assets/imgs/galleryimg3.jpeg";
 import galimg5 from "../assets/imgs/galleryimg4.jpeg";
 import galimg6 from "../assets/imgs/galleryimg5.jpeg";
-import galimg12 from "../assets/imgs/galleryimg6.jpeg";
-import galimg7 from "../assets/imgs/galleryimg7.jpeg";
-import galimg8 from "../assets/imgs/galleryimg8.jpeg";
-import galimg9 from "../assets/imgs/galleryimg9.jpeg";
-import galimg10 from "../assets/imgs/galleryimg10.jpeg";
-import galimg11 from "../assets/imgs/galleryimg11.jpeg";
 import galimg4 from "../assets/imgs/galleryimg12.jpeg";
-import galimg13 from "../assets/imgs/galleryimg13.jpeg";
-import galimg14 from "../assets/imgs/galleryimg14.jpeg";
-import galimg15 from "../assets/imgs/galleryimg15.jpeg";
-import galimg17 from "../assets/imgs/galleryimg16.jpeg";
-import galimg16 from "../assets/imgs/galleryimg17.jpeg";
-import galimg18 from "../assets/imgs/galleryimg18.jpeg";
-import galimg19 from "../assets/imgs/galleryimg19.jpeg";
-import galimg20 from "../assets/imgs/galleryimg20.jpeg";
-import galimg22 from "../assets/imgs/galleryimg21.jpeg";
-import galimg21 from "../assets/imgs/galleryimg22.jpeg";
 import galimg23 from "../assets/imgs/galleryimg23.jpeg";
 import galimg24 from "../assets/imgs/galleryimg24.jpeg";
 
@@ -82,32 +66,7 @@ const HomePage = ({ setCurrentPage, searchQuery }) => {
   const candidiasisImages = useMemo(() => [img4, img5], []);
 
   const galleryImages = useMemo(
-    () => [
-      galimg,
-      galimg2,
-      galimg3,
-      galimg4,
-      galimg5,
-      galimg6,
-      galimg7,
-      galimg8,
-      galimg9,
-      galimg10,
-      galimg11,
-      galimg12,
-      galimg13,
-      galimg14,
-      galimg15,
-      galimg16,
-      galimg17,
-      galimg18,
-      galimg19,
-      galimg20,
-      galimg21,
-      galimg22,
-      galimg23,
-      galimg24,
-    ],
+    () => [galimg, galimg2, galimg3, galimg4, galimg5, galimg6, galimg23, galimg24],
     [],
   );
 
@@ -412,7 +371,7 @@ const HomePage = ({ setCurrentPage, searchQuery }) => {
   return (
     <div className="space-y-16">
       {showSearchMessage && (
-        <div className="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-lg">
+        <div className="bg-emerald-50 border-l-4 border-emerald-700 p-4 rounded-lg">
           <p className="text-gray-800">
             <span className="font-semibold">
               {filteredSections.length === sections.length
@@ -450,7 +409,7 @@ const HomePage = ({ setCurrentPage, searchQuery }) => {
             </p>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-amber-700 hover:text-amber-900 font-semibold"
+              className="text-emerald-700 hover:text-emerald-900 font-semibold"
             >
               View all treatments
             </button>
